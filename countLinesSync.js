@@ -1,8 +1,8 @@
 var fs = require('fs'),
-    n = process.argv[2],
-    b = fs.readFileSync(n),
-    t = b.toString('ascii'),
-    l = t.split('\n');
+    filename = process.argv[2],
+    buffer = fs.readFileSync(filename),
+    text = buffer.toString('ascii'),
+    lines = text.split('\n');
 
-console.log(l.length - 1);
+console.log(lines.length - 1);
 
