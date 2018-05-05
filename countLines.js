@@ -1,10 +1,10 @@
 var fs = require('fs'),
-    n = process.argv[2];
+    filename = process.argv[2];
 
-fs.readFile(n , (err, b)=>{
-    var t = b.toString('ascii'),
-        l = t.split('\n');
+fs.readFile(filename , (err, buffer)=>{
+    var text = buffer.toString('ascii'),
+        lines = text.split('\n');
 
-    console.log(l.length - 1);
+    console.log(lines.length - 1);
 });     
 
